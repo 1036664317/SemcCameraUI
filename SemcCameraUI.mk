@@ -52,4 +52,5 @@ PRODUCT_PACKAGES += \
     CameraExtensionPermission \
     ImageProcessorPermission \
     CameraCommon \
-    com.sonymobile.imageprocessor.bypasscamera_impl
+    com.sonymobile.imageprocessor.bypasscamera_impl \
+    lib-camshim

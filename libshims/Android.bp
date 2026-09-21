@@ -1,0 +1,10 @@
+cc_library_shared {
+    name: "lib-camshim",
+    srcs: ["lib-camshim.cpp"],
+    compile_multilib: "both",
+    shared_libs: [
+        "libgui",
+        "libbinder",
+        "libutils",
+    ],
+}

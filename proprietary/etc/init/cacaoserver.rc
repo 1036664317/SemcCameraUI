@@ -8,4 +8,4 @@ service cacaoserver /system/bin/cacaoserver
     user cameraserver
     group audio camera input drmrpc
     ioprio rt 4
-    writepid /dev/cpuset/camera-daemon/tasks /dev/stune/top-app/tasks
+    task_profiles CameraServiceCapacity MaxPerformance

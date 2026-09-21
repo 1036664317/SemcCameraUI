@@ -14,7 +14,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/SemcCameraUI/proprietary/lib/libcacao_process_ctrl_gateway.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcacao_process_ctrl_gateway.so \
     vendor/sony/SemcCameraUI/proprietary/lib/libcacao_service.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcacao_service.so \
     vendor/sony/SemcCameraUI/proprietary/lib/libimageprocessorjni.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libimageprocessorjni.so \
-    vendor/sony/SemcCameraUI/proprietary/lib/lib-camshim.so:$(TARGET_COPY_OUT_SYSTEM)/lib/lib-camshim.so \
     vendor/sony/SemcCameraUI/proprietary/lib/vendor.somc.hardware.camera.cacao@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.somc.hardware.camera.cacao@1.0.so \
     vendor/sony/SemcCameraUI/proprietary/lib/vendor.somc.hardware.camera.cacao@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.somc.hardware.camera.cacao@2.0.so \
     vendor/sony/SemcCameraUI/proprietary/lib/vendor.somc.hardware.camera.cacao@3.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.somc.hardware.camera.cacao@3.0.so \
@@ -25,7 +24,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/SemcCameraUI/proprietary/lib64/libcacao_client.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcacao_client.so \
     vendor/sony/SemcCameraUI/proprietary/lib64/libcacao_pal.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcacao_pal.so \
     vendor/sony/SemcCameraUI/proprietary/lib64/libimageprocessorjni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libimageprocessorjni.so \
-    vendor/sony/SemcCameraUI/proprietary/lib64/lib-camshim.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/lib-camshim.so \
     vendor/sony/SemcCameraUI/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libSNPE.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libSNPE.so \
     vendor/sony/SemcCameraUI/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libarcsoft_handsigns.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libarcsoft_handsigns.so \
     vendor/sony/SemcCameraUI/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libc++_shared.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libc++_shared.so \
@@ -53,4 +51,5 @@ PRODUCT_PACKAGES += \
     ImageProcessorPermission \
     CameraCommon \
     com.sonymobile.imageprocessor.bypasscamera_impl \
+    com.sonymobile.camera.addon_impl \
     lib-camshim

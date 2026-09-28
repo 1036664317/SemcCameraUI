@@ -6,5 +6,6 @@ cc_library_shared {
         "libgui",
         "libbinder",
         "libutils",
+        "liblog",
     ],
 }

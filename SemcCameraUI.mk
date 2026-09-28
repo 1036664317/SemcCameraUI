@@ -6,41 +6,10 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/sony/SemcCameraUI
 
 PRODUCT_COPY_FILES += \
-    vendor/sony/SemcCameraUI/proprietary/bin/cacaoserver:$(TARGET_COPY_OUT_SYSTEM)/bin/cacaoserver \
     vendor/sony/SemcCameraUI/proprietary/etc/init/cacaoserver.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/cacaoserver.rc \
     vendor/sony/SemcCameraUI/proprietary/etc/permissions/com.sonymobile.imageprocessor.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.sonymobile.imageprocessor.xml \
-    vendor/sony/SemcCameraUI/proprietary/lib/libcacao_client.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcacao_client.so \
-    vendor/sony/SemcCameraUI/proprietary/lib/libcacao_pal.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcacao_pal.so \
-    vendor/sony/SemcCameraUI/proprietary/lib/libcacao_process_ctrl_gateway.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcacao_process_ctrl_gateway.so \
-    vendor/sony/SemcCameraUI/proprietary/lib/libcacao_service.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcacao_service.so \
-    vendor/sony/SemcCameraUI/proprietary/lib/libimageprocessorjni.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libimageprocessorjni.so \
-    vendor/sony/SemcCameraUI/proprietary/lib/vendor.somc.hardware.camera.cacao@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.somc.hardware.camera.cacao@1.0.so \
-    vendor/sony/SemcCameraUI/proprietary/lib/vendor.somc.hardware.camera.cacao@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.somc.hardware.camera.cacao@2.0.so \
-    vendor/sony/SemcCameraUI/proprietary/lib/vendor.somc.hardware.camera.cacao@3.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.somc.hardware.camera.cacao@3.0.so \
-    vendor/sony/SemcCameraUI/proprietary/lib/vendor.somc.hardware.camera.cacao@3.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.somc.hardware.camera.cacao@3.1.so \
-    vendor/sony/SemcCameraUI/proprietary/lib/vendor.somc.hardware.camera.cacao@3.2.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.somc.hardware.camera.cacao@3.2.so \
-    vendor/sony/SemcCameraUI/proprietary/lib/vendor.somc.hardware.camera.device@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.somc.hardware.camera.device@1.0.so \
-    vendor/sony/SemcCameraUI/proprietary/lib/vendor.somc.hardware.camera.provider@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.somc.hardware.camera.provider@1.0.so \
-    vendor/sony/SemcCameraUI/proprietary/lib64/libcacao_client.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcacao_client.so \
-    vendor/sony/SemcCameraUI/proprietary/lib64/libcacao_pal.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcacao_pal.so \
-    vendor/sony/SemcCameraUI/proprietary/lib64/libimageprocessorjni.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libimageprocessorjni.so \
-    vendor/sony/SemcCameraUI/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libSNPE.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libSNPE.so \
-    vendor/sony/SemcCameraUI/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libarcsoft_handsigns.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libarcsoft_handsigns.so \
-    vendor/sony/SemcCameraUI/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libc++_shared.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libc++_shared.so \
-    vendor/sony/SemcCameraUI/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libdetector.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libdetector.so \
-    vendor/sony/SemcCameraUI/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libhandsigns_jni.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libhandsigns_jni.so \
-    vendor/sony/SemcCameraUI/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libhta.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libhta.so \
-    vendor/sony/SemcCameraUI/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libimage_converter.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libimage_converter.so \
-    vendor/sony/SemcCameraUI/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libmpbase.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libmpbase.so \
-    vendor/sony/SemcCameraUI/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libsnpe-android.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libsnpe-android.so \
-    vendor/sony/SemcCameraUI/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libsnpe_adsp.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libsnpe_adsp.so \
-    vendor/sony/SemcCameraUI/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libsnpe_dsp_domains.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libsnpe_dsp_domains.so \
-    vendor/sony/SemcCameraUI/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libsnpe_dsp_domains_skel.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libsnpe_dsp_domains_skel.so \
-    vendor/sony/SemcCameraUI/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libsnpe_dsp_domains_v2.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libsnpe_dsp_domains_v2.so \
-    vendor/sony/SemcCameraUI/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libsnpe_dsp_skel.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libsnpe_dsp_skel.so \
-    vendor/sony/SemcCameraUI/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libsnpe_dsp_v65_domains_v2_skel.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libsnpe_dsp_v65_domains_v2_skel.so \
-    vendor/sony/SemcCameraUI/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libsnpe_dsp_v66_domains_v2_skel.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libsnpe_dsp_v66_domains_v2_skel.so \
-    vendor/sony/SemcCameraUI/proprietary/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libsymphony-cpu.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/SemcCameraUI-xxhdpi-release/lib/arm64/libsymphony-cpu.so \
+    vendor/sony/SemcCameraUI/proprietary/etc/default-permissions/default-permissions-sony-camera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/default-permissions-sony-camera.xml \
+    vendor/sony/SemcCameraUI/proprietary/etc/sysconfig/sony-camera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/sony-camera.xml \
     vendor/sony/SemcCameraUI/proprietary/product/etc/permissions/com.sonymobile.camera.addon.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.sonymobile.camera.addon.xml
 
 PRODUCT_PACKAGES += \
@@ -52,4 +21,18 @@ PRODUCT_PACKAGES += \
     CameraCommon \
     com.sonymobile.imageprocessor.bypasscamera_impl \
     com.sonymobile.camera.addon_impl \
-    lib-camshim
+    lib-camshim \
+    cacaoserver \
+    libcacao_client \
+    libcacao_pal \
+    libimageprocessorjni \
+    libcacao_process_ctrl_gateway \
+    libcacao_service \
+    vendor.somc.hardware.camera.cacao@1.0-system \
+    vendor.somc.hardware.camera.cacao@2.0-system \
+    vendor.somc.hardware.camera.cacao@3.0-system \
+    vendor.somc.hardware.camera.cacao@3.1-system \
+    vendor.somc.hardware.camera.cacao@3.2-system \
+    vendor.somc.hardware.camera.device@1.0-system \
+    vendor.somc.hardware.camera.provider@1.0-system
+

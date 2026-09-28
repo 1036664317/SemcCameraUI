@@ -6,83 +6,305 @@ soong_namespace {
 }
 
 android_app_import {
-	name: "SemcCameraUI-xxhdpi-release",
-	owner: "sony",
-	apk: "proprietary/priv-app/SemcCameraUI-xxhdpi-release/SemcCameraUI-xxhdpi-release.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
+    name: "SemcCameraUI-xxhdpi-release",
+    owner: "sony",
+    apk: "proprietary/priv-app/SemcCameraUI-xxhdpi-release/SemcCameraUI-xxhdpi-release.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
 }
 
 android_app_import {
-	name: "CameraAddonPermission",
-	owner: "sony",
-	apk: "proprietary/product/app/CameraAddonPermission/CameraAddonPermission.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	product_specific: true,
+    name: "CameraAddonPermission",
+    owner: "sony",
+    apk: "proprietary/product/app/CameraAddonPermission/CameraAddonPermission.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
 }
 
 android_app_import {
-	name: "CameraCommonPermission",
-	owner: "sony",
-	apk: "proprietary/product/app/CameraCommonPermission/CameraCommonPermission.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	product_specific: true,
+    name: "CameraCommonPermission",
+    owner: "sony",
+    apk: "proprietary/product/app/CameraCommonPermission/CameraCommonPermission.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
 }
 
 android_app_import {
-	name: "CameraExtensionPermission",
-	owner: "sony",
-	apk: "proprietary/product/app/CameraExtensionPermission/CameraExtensionPermission.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	product_specific: true,
+    name: "CameraExtensionPermission",
+    owner: "sony",
+    apk: "proprietary/product/app/CameraExtensionPermission/CameraExtensionPermission.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
 }
 
 android_app_import {
-	name: "ImageProcessorPermission",
-	owner: "sony",
-	apk: "proprietary/product/app/ImageProcessorPermission/ImageProcessorPermission.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	product_specific: true,
+    name: "ImageProcessorPermission",
+    owner: "sony",
+    apk: "proprietary/product/app/ImageProcessorPermission/ImageProcessorPermission.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
 }
 
 android_app_import {
-	name: "CameraCommon",
-	owner: "sony",
-	apk: "proprietary/product/priv-app/CameraCommon/CameraCommon.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	product_specific: true,
-}
-
-
-dex_import {
-	name: "com.sonymobile.imageprocessor.bypasscamera_impl",
-	owner: "sony",
-	jars: ["proprietary/framework/com.sonymobile.imageprocessor.bypasscamera_impl.jar"],
+    name: "CameraCommon",
+    owner: "sony",
+    apk: "proprietary/product/priv-app/CameraCommon/CameraCommon.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    product_specific: true,
 }
 
 dex_import {
-	name: "com.sonymobile.camera.addon_impl",
-	owner: "sony",
-	jars: ["proprietary/product/framework/com.sonymobile.camera.addon_impl.jar"],
-	product_specific: true,
+    name: "com.sonymobile.imageprocessor.bypasscamera_impl",
+    owner: "sony",
+    jars: ["proprietary/framework/com.sonymobile.imageprocessor.bypasscamera_impl.jar"],
 }
 
+dex_import {
+    name: "com.sonymobile.camera.addon_impl",
+    owner: "sony",
+    jars: ["proprietary/product/framework/com.sonymobile.camera.addon_impl.jar"],
+    product_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "cacaoserver",
+    owner: "sony",
+    target: {
+        android_arm: {
+            srcs: ["proprietary/bin/cacaoserver"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcacao_client",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/lib/libcacao_client.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/lib64/libcacao_client.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcacao_pal",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/lib/libcacao_pal.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/lib64/libcacao_pal.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libimageprocessorjni",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/lib/libimageprocessorjni.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/lib64/libimageprocessorjni.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcacao_process_ctrl_gateway",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/lib/libcacao_process_ctrl_gateway.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcacao_service",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/lib/libcacao_service.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.somc.hardware.camera.cacao@1.0-system",
+    stem: "vendor.somc.hardware.camera.cacao@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/lib/vendor.somc.hardware.camera.cacao@1.0.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.somc.hardware.camera.cacao@2.0-system",
+    stem: "vendor.somc.hardware.camera.cacao@2.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/lib/vendor.somc.hardware.camera.cacao@2.0.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.somc.hardware.camera.cacao@3.0-system",
+    stem: "vendor.somc.hardware.camera.cacao@3.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/lib/vendor.somc.hardware.camera.cacao@3.0.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.somc.hardware.camera.cacao@3.1-system",
+    stem: "vendor.somc.hardware.camera.cacao@3.1",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/lib/vendor.somc.hardware.camera.cacao@3.1.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.somc.hardware.camera.cacao@3.2-system",
+    stem: "vendor.somc.hardware.camera.cacao@3.2",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/lib/vendor.somc.hardware.camera.cacao@3.2.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.somc.hardware.camera.device@1.0-system",
+    stem: "vendor.somc.hardware.camera.device@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/lib/vendor.somc.hardware.camera.device@1.0.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.somc.hardware.camera.provider@1.0-system",
+    stem: "vendor.somc.hardware.camera.provider@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/lib/vendor.somc.hardware.camera.provider@1.0.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+}

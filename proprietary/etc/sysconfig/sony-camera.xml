@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: 2026 The WitAqua Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<config>
+    <allow-in-power-save package="com.sonyericsson.android.camera" />
+    <allow-in-power-save package="com.sonymobile.cameracommon" />
+    <allow-in-power-save package="com.sonymobile.cinemapro" />
+    <allow-in-power-save package="com.sonyericsson.android.camera3d" />
+    <allow-in-power-save package="com.sonyericsson.android.addoncamera.artfilter" />
+    <allow-in-power-save package="com.sonymobile.android.addoncamera.timeshift" />
+    <allow-in-power-save package="com.sonymobile.addoncamera.portraitselfie" />
+</config>

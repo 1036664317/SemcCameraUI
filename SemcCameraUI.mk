@@ -22,6 +22,7 @@ PRODUCT_PACKAGES += \
     com.sonymobile.imageprocessor.bypasscamera_impl \
     com.sonymobile.camera.addon_impl \
     lib-camshim \
+    libswregistrationalgo \
     cacaoserver \
     libcacao_client \
     libcacao_pal \

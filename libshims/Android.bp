@@ -9,3 +9,13 @@ cc_library_shared {
         "liblog",
     ],
 }
+
+cc_library_shared {
+    name: "libswregistrationalgo",
+    srcs: ["libswregistrationalgo.cpp"],
+    vendor: true,
+    compile_multilib: "both",
+    shared_libs: [
+        "liblog",
+    ],
+}

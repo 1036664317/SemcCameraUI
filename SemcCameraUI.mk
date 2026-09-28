@@ -23,6 +23,7 @@ PRODUCT_PACKAGES += \
     com.sonymobile.camera.addon_impl \
     lib-camshim \
     libswregistrationalgo \
+    libui-v34 \
     cacaoserver \
     libcacao_client \
     libcacao_pal \
